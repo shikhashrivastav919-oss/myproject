@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>2MB Computer - Smartphones</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="/static/page_style.css" />
+</head>
+<body>
+   <!-- header -->
+   <div class="category-header">
+     <a href="javascript:history.back()" class="back-btn">
+       <i class="fa-solid fa-arrow-left"></i>
+       <span>Back</span>
+       <br>
+     </a> 
+     <br>
+     <h1>Laptops</h1>
+     <p>Browse our collection of quality refurbished Laptops</p>
+    </div>
+
+<!-- SEARCH + FILTER ROW -->
+<div class="top-controls">
+
+  <!-- SEARCH BAR -->
+  <div class="search-bar">
+    <i class="fa fa-search"></i>
+    <input type="text" id="searchInput"
+           placeholder="2MB Computer is here to help you">
+  </div>
+
+  <!-- FILTER DROPDOWN -->
+  <div class="filter-dropdown">
+
+    <button class="filter-btn" onclick="toggleFilter()">
+      <i class="fa fa-filter"></i> Filter
+    </button>
+
+    <div class="filter-menu" id="filterMenu">
+
+      <!-- PRICE -->
+      <div class="filter-box">
+        <h4>Price</h4>
+        <input type="number" id="minPrice" placeholder="Min ₹">
+        <input type="number" id="maxPrice" placeholder="Max ₹">
+      </div>
+
+      <!-- BRAND -->
+      <div class="filter-box">
+        <h4>Brand</h4>
+        <label><input type="checkbox" value="Hp" class="brandFilter"> Hp</label>
+        <label><input type="checkbox" value=" Vistus" class="brandFilter"> Vistus</label>
+        <label><input type="checkbox" value="Asus" class="brandFilter"> Asus</label>
+        <label><input type="checkbox" value="Samsung" class="brandFilter"> Samsung</label>
+        <label><input type="checkbox" value="iPhone" class="brandFilter"> iPhone</label>
+        <label><input type="checkbox" value="Dell" class="brandFilter"> Dell</label>
+        <label><input type="checkbox" value="Redime" class="brandFilter"> Redim</label>
+        <label><input type="checkbox" value="Lenovo" class="brandFilter"> Lenovo</label>
+      </div>
+      
+      <button class="apply-btn" onclick="applyFilters()">Apply</button>
+
+    </div>
+  </div>
+
+</div>
+
+
+
+<section class="products" id="productList"></section>
+
+<script src="/static/page_script.js"></script>
+</body>
+</html>
